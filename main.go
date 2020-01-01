@@ -1,7 +1,7 @@
 package main
 
 import (
-        "cicd/calculation"
+        "cicd-test/calculation"
         "github.com/satori/go.uuid"
         log "github.com/sirupsen/logrus"
 )
