@@ -17,10 +17,14 @@ jobs:
         echo test, and deploy your project.
         ls -l
         cat a b
-        sudo add-apt-repository ppa:longsleep/golang-backports 
-        sudo apt-get update 
-        sudo apt-get install golang-go
-        dpkg -l |grep golang
+        #sudo add-apt-repository ppa:longsleep/golang-backports 
+        #sudo apt-get update 
+        #sudo apt-get install golang-go
+        #dpkg -l |grep golang
+        wget https://dl.google.com/go/go1.12.5.linux-amd64.tar.gz
+        tar -xvf go1.12.5.linux-amd64.tar.gz
+        sudo mv go /usr/local
+        go version
         mkdir -p cicd/src
         cp -R * cicd/src || true
         export GOPATH=$PWD/cicd
