@@ -21,3 +21,11 @@ jobs:
         sudo apt-get update 
         sudo apt-get install golang-go
         dpkg -l |grep golang
+        mkdir -p cicd/src
+        cp -R * cicd/src || true
+        export GOPATH=$PWD/cicd
+        export GOBIN=$GOPATH/bin
+        export GO111MODULE=on
+        cd $GOPATH/src
+        go build
+        go test ./... --cover -race
