@@ -1,4 +1,4 @@
-module ci-cd-test
+module cicd-test
 
 go 1.12
 
