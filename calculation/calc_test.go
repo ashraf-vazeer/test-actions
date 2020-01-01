@@ -1,17 +1,5 @@
 package calculation
 
-// Sub is for finding sub
-func Sub(a, b int) int {
-        return a - b
-}
-
-// Sum is for finding sum
-func Sum(a, b int) int {
-        return a + b
-}
-nfvadmin@ilos:~/opensource/src/ci-cd-test/cicd/src/calculation$ cat calc_test.go
-package calculation
-
 import "testing"
 
 func TestSub(t *testing.T) {
